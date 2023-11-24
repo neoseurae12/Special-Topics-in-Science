@@ -24,15 +24,15 @@ state
 
 
 # ## Transition Matrix
-# <img src="https://velog.velcdn.com/images/neoseurae12/post/ae0b438d-d42d-422d-b4bf-3f993e1f6b26/image.jpeg" width="400px">
+# <img src="https://velog.velcdn.com/images/neoseurae12/post/aeeaf770-15e2-4f57-aa64-4f5a184cf0d8/image.jpeg" width="400px">
 
 # In[4]:
 
 
 A = np.array(
-    [[0.644, 0.248, 0.108],
-    [0.122, 0.701, 0.177],
-    [0.055, 0.116, 0.829]])
+    [[0.646, 0.246, 0.108],
+    [0.121, 0.703, 0.176],
+    [0.055, 0.115, 0.830]])
 A
 
 
@@ -110,10 +110,4 @@ print("eigen values = \n", values)
 pi = left[:,0]
 pi_normalized = [(x/np.sum(pi)).real for x in pi]
 pi_normalized
-
-
-# In[ ]:
-
-
-
 
