@@ -7,10 +7,7 @@
 import numpy as np
 
 
-# # The Dynamics of Internal Migration in S.Korea: A Markov Chain Analysis
-# 
-
-# <img src="https://velog.velcdn.com/images/neoseurae12/post/0e578941-88f2-4dfc-a466-2ec0d3741f74/image.jpeg" width="500px">
+# # The Dynamics of Internal Migration in S. Korea: A Markov Chain Analysis
 
 # In[2]:
 
@@ -24,15 +21,14 @@ state
 
 
 # ## Transition Matrix
-# <img src="https://velog.velcdn.com/images/neoseurae12/post/aeeaf770-15e2-4f57-aa64-4f5a184cf0d8/image.jpeg" width="400px">
 
 # In[4]:
 
 
 A = np.array(
     [[0.646, 0.246, 0.108],
-    [0.121, 0.703, 0.176],
-    [0.055, 0.115, 0.830]])
+    [0.121, 0.763, 0.116],
+    [0.055, 0.076, 0.869]])
 A
 
 

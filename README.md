@@ -2,10 +2,10 @@
 import numpy as np
 ```
 
-# The Dynamics of Internal Migration in S.Korea: A Markov Chain Analysis
+# The Dynamics of Internal Migration in S. Korea: A Markov Chain Analysis
 
 
-<img src="https://velog.velcdn.com/images/neoseurae12/post/44c092b1-c747-415e-8d2d-dd0762dccc6a/image.jpeg" width="500px">
+<img src="https://velog.velcdn.com/images/neoseurae12/post/c5bd58b7-0033-4850-a198-000ea5bba435/image.jpeg" width="500px">
 
 
 ```python
@@ -25,7 +25,8 @@ state
 
 
 ## Transition Matrix
-<img src="https://velog.velcdn.com/images/neoseurae12/post/aeeaf770-15e2-4f57-aa64-4f5a184cf0d8/image.jpeg" width="400px">
+<img src="https://velog.velcdn.com/images/neoseurae12/post/c2b43497-b224-45bf-97a8-bb8063be890e/image.jpeg" width="400px">
+<img src="https://velog.velcdn.com/images/neoseurae12/post/e45935ed-7cb5-4509-a30e-69f7edd48f30/image.jpeg" width="400px">
 
 
 ```python
@@ -40,8 +41,8 @@ A
 
 
     array([[0.646, 0.246, 0.108],
-          [0.121, 0.703, 0.176],
-          [0.055, 0.115, 0.830]])
+          [0.121, 0.763, 0.116],
+          [0.055, 0.076, 0.869]])
 
 
 
@@ -62,7 +63,7 @@ while n - 1:
 print("stop")
 ```
 
-    Rural ---> Rural ---> Rural ---> Rural ---> Rural ---> Metropolitan ---> Rural ---> Rural ---> Rural ---> Rural ---> Seoul ---> Seoul ---> stop
+    Rural ---> Rural ---> Rural ---> Rural ---> Rural ---> Rural ---> Rural ---> Seoul ---> Metropolitan ---> Metropolitan ---> Seoul ---> Seoul ---> stop
 
 
 ## Approach 1: Monte Carlo
@@ -86,7 +87,7 @@ print("π = \n", pi/steps)
 ```
 
     π = 
-     [0.189996 0.339892 0.470113]
+     [0.189963 0.346825 0.463213]
 
 
 ## Approach 2: Repeated Matrix Multiplication
@@ -106,11 +107,11 @@ print("π = ", A_n[0])
 ```
 
     A^n = 
-     [[0.18922571 0.33929264 0.47148165]
-     [0.18922571 0.33929264 0.47148165]
-     [0.18922571 0.33929264 0.47148165]] 
+     [[0.19033879 0.3461904  0.46347081]
+      [0.19033879 0.3461904  0.46347081]
+      [0.19033879 0.3461904  0.46347081]] 
 
-    π =  [0.18922571 0.33929264 0.47148165]
+    π =  [0.19033879 0.3461904  0.46347081]
 
 
 ## Approach 3: Finding Left Eigen Vectors
@@ -125,12 +126,12 @@ print("eigen values = \n", values)
 ```
 
     left eigen vectors = 
-     [[ 0.30973994  0.55586939 -0.34067498]
-     [ 0.55538163 -0.79586994 -0.47227859]
-     [ 0.7717593   0.24000055  0.81295356]] 
+     [[ 0.31254282  0.69473091 -0.22720446]
+     [ 0.5684565  -0.71886475 -0.56557639]
+     [ 0.76103495  0.02413384  0.79278085]] 
     
     eigen values = 
-     [1.        +0.j 0.49650403+0.j 0.68249597+0.j]
+     [1.        +0.j 0.52270727+0.j 0.75529273+0.j]
 
 
 
@@ -143,4 +144,4 @@ pi_normalized
 
 
 
-    [0.1892257071724362, 0.3392926399019156, 0.47148165292564814]
+    [0.19033879294844838, 0.3461903987259954, 0.46347080832555626]
